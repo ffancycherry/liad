@@ -1,19 +1,19 @@
+import api from '../api/apiInstance'
 import { Effect, createDomain, createEffect, sample } from 'effector'
 import { Gate, createGate } from 'effector-react'
 import { getProjectsFx } from '@/api/main-page'
 import toast from 'react-hot-toast'
-import api from '../api/apiInstance'
 import { ILoadAllProjectsFx, IProjects } from '@/types/projects'
 
 export const loadAllProjectsFx = createEffect(
-  async ({ limit, offset, additionalParam, isCatalog }: ILoadAllProjectsFx) => {
+  async ({ limit, offset, additionalParam }: ILoadAllProjectsFx) => {
     try {
       const { data } = await api.get(
-        `/api/projects/filter?limit=${limit}&offset=${offset}}&${additionalParam}${
-          isCatalog ? '&catalog=true' : ''
-        }`
+        `/api/projects?limit=${limit}&offset=${offset}&${additionalParam}`
       )
 
+      console.log('Данные')
+      console.log(data)
       return data
     } catch (error) {
       toast.error((error as Error).message)
@@ -24,8 +24,6 @@ export const loadAllProjectsFx = createEffect(
 const projects = createDomain()
 
 export const MainPageGate = createGate()
-
-export const loadAllProjects = projects.createEvent<ILoadAllProjectsFx>()
 
 const projectsStoreInstance = (effect: Effect<void, [], Error>) =>
   projects
@@ -47,6 +45,8 @@ const projectsSampleInstance = (
 projectsSampleInstance(getProjectsFx, MainPageGate)
 
 export const $mainProjects = projectsStoreInstance(getProjectsFx)
+
+export const loadAllProjects = projects.createEvent<ILoadAllProjectsFx>()
 
 export const $projects = projects
   .createStore<IProjects>({} as IProjects)

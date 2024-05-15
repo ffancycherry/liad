@@ -1,5 +1,5 @@
-export type searchParams = { [key: string]: string | string[] | undefined }
+export type SearchParams = { [key: string]: string | string[] | undefined }
 export interface IProjectsPage {
-  searchParams: searchParams
+  searchParams: SearchParams
   pageName: string
 }

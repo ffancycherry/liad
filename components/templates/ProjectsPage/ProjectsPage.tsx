@@ -7,14 +7,17 @@ import skeletonStyles from '@/styles/skeleton/index.module.scss'
 import { basePropsForMotion } from '@/constants/motion'
 import ProjectsItem from '@/components/modules/ProjectsItem/ProjectsItem'
 import styles from '@/styles/projects-page/index.module.scss'
+import { useUnit } from 'effector-react'
+import { $projects } from '@/context/projects'
 
-const ProjectsPage = ({ searchParams, pageName }: IProjectsPage) => {
-  const { projects, projectSpinner, paginationProps, handlePageChange } =
-    useProjectFilters(searchParams, pageName === 'projects')
+const ProjectsPage = ({ searchParams }: IProjectsPage) => {
+  const { projectSpinner, paginationProps, handlePageChange } =
+    useProjectFilters(searchParams)
+  const projects = useUnit($projects)
 
-  console.log(projects)
   return (
     <>
+      <h1 className=''>Проекты</h1>
       {projectSpinner && (
         <motion.ul
           {...basePropsForMotion}
@@ -32,13 +35,16 @@ const ProjectsPage = ({ searchParams, pageName }: IProjectsPage) => {
       {!projectSpinner && (
         <motion.ul
           {...basePropsForMotion}
-          className={skeletonStyles.skeleton}
+          className={`list-reset ${styles.projects__list}`}
           exit={{ opacity: 0 }}
         >
           {(projects.items || []).map((item) => (
             <ProjectsItem key={item._id} item={item} />
           ))}
         </motion.ul>
+      )}
+      {!projects.items?.length && !projectSpinner && (
+        <div className={styles.projects__list__empty}>Ничего не найдено</div>
       )}
       <div className={styles.projects__bottom}>
         <ReactPaginate

@@ -6,6 +6,8 @@ import MainPageSection from './MainPageSection'
 const MainProjects = () => {
   const projects = useUnit($mainProjects)
   const spinner = useUnit(getProjectsFx.pending)
+
+  console.log(projects)
   return (
     <MainPageSection title='Проекты' projects={projects} spinner={spinner} />
   )

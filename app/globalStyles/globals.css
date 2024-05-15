@@ -82,3 +82,15 @@ body::-webkit-scrollbar-thumb:hover {
 .auth-overlay.overlay-active {
   z-index: 10;
 }
+
+.projects-pagination-prev.disabled, .projects-pagination-next.disabled {
+  display: none;
+}
+
+.projects-pagination-item.selected {
+  background-color: #cfcece;
+}
+
+.projects-pagination-item:hover.selected a {
+  background-color: #cfcece;
+}

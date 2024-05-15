@@ -23,7 +23,7 @@ const images = [
 module.exports = {
   async up(db) {
     return db.collection('projects').insertMany(
-      [...Array(30)].map(() => ({
+      [...Array(50)].map(() => ({
         name: 'Проект № ' + (Math.floor(Math.random() * (100 - 1)) + 1),
         description:
           'Ключевые слова или краткое описание или имя автора/команды',

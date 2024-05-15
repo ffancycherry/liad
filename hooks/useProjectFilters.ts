@@ -12,13 +12,10 @@ import {
   getSearchParamsUrl,
   updateSearchParam,
 } from '@/lib/utils/common'
-import { searchParams } from '@/types/catalog'
+import { SearchParams } from '@/types/catalog'
 import styles from '@/styles/projects-page/index.module.scss'
 
-export const useProjectFilters = (
-  searchParams: searchParams,
-  isCatalog = false
-) => {
+export const useProjectFilters = (searchParams: SearchParams) => {
   const projects = useUnit($projects)
   const isValidOffset = checkOffsetParam(searchParams.offset)
   const pagesCount = Math.ceil((projects.count || 12) / 12)
@@ -38,7 +35,6 @@ export const useProjectFilters = (
         limit: 12,
         offset: 0,
         additionalParam: urlParams.toString(),
-        isCatalog,
       })
 
       updateSearchParam('offset', 0, pathname)
@@ -50,7 +46,6 @@ export const useProjectFilters = (
       limit: 12 * +(searchParams.offset || 0) + 12,
       offset: +(searchParams.offset || 0) * 12,
       additionalParam: urlParams.toString(),
-      isCatalog,
     })
 
     setCurrentPage(+(searchParams.offset || 0))
@@ -64,7 +59,6 @@ export const useProjectFilters = (
       limit: 12 * selected + 12,
       offset: selected * 12,
       additionalParam: urlParams.toString(),
-      isCatalog,
     })
 
     updateSearchParam('offset', selected, pathname)

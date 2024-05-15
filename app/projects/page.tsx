@@ -1,10 +1,10 @@
 import ProjectsPage from '@/components/templates/ProjectsPage/ProjectsPage'
-import { searchParams } from '@/types/catalog'
+import { SearchParams } from '@/types/catalog'
 
-export default function Projects({
+export default function Catalog({
   searchParams,
 }: {
-  searchParams?: searchParams
+  searchParams?: SearchParams
 }) {
-  return <ProjectsPage searchParams={searchParams || {}} pageName='projects' />
+  return <ProjectsPage searchParams={searchParams || {}} pageName='catalog' />
 }
