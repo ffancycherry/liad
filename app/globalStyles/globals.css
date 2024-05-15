@@ -1,5 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+@font-face {
+  font-display: swap;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../public/fonts/Inter-VariableFont_slnt,wght.ttf') format("ttf");
+} 
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../public/fonts/Inter-VariableFont_slnt,wght.ttf') format("ttf");
+} 
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  src: url('../../public/fonts/Inter-VariableFont_slnt,wght.ttf') format("ttf");
+} 
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../public/fonts/Inter-VariableFont_slnt,wght.ttf') format("ttf");
+} 
+
 * {
   box-sizing: border-box;
 }

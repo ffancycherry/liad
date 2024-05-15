@@ -8,8 +8,6 @@ export async function GET(req: Request) {
     const url = new URL(req.url)
     const limit = url.searchParams.get('limit') || 12
     const offset = url.searchParams.get('offset') || 0
-    //const isProjectsParam = url.searchParams.get('projects')
-    console.log(limit, offset)
 
     {
       /*if (!isProjectsParam) {
