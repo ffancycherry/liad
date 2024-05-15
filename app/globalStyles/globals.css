@@ -65,7 +65,7 @@ body::-webkit-scrollbar-thumb:hover {
   margin-bottom: 40px;
 }
 .auth-overlay {
-  background-color: #05193B;
+  background-color: #cfcfcfc7;
   height: 100%;
   left: 0;
   opacity: 0;
