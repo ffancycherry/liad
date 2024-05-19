@@ -1,7 +1,33 @@
-import { IProject } from './common'
+import {
+  ICompetition,
+  IDevteam,
+  IEvent,
+  IProject,
+  IScientificWork,
+} from './common'
 
 export interface IProjectsItemProps {
   item: IProject
+  title?: string
+}
+
+export interface IDevteamItemProps {
+  item: IDevteam
+  title?: string
+}
+
+export interface IEventsItemProps {
+  item: IEvent
+  title?: string
+}
+
+export interface ICompetionItemProps {
+  item: ICompetition
+  title?: string
+}
+
+export interface IScientificWorkItemProps {
+  item: IScientificWork
   title?: string
 }
 

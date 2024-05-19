@@ -6,3 +6,5 @@ export async function GET() {
   const { db } = await getDbAndReqBody(clientPromise, null)
   return NextResponse.json(await getProjectsMain(db))
 }
+
+export const dynamic = 'force-dynamic'

@@ -1,6 +1,6 @@
 .list {
     &__item {
-      height: 412px;
+      height: 482px;
       width: 306px;
       position: relative;
       padding: 20px;
@@ -11,10 +11,12 @@
       align-items: center;
       justify-content: space-between;
       border-radius: 25px;
+      border-top-left-radius: 150px;
+      border-top-right-radius: 150px;
       box-shadow: 0px 4px 40px 0 rgba(0, 0, 0, 0.2);
   
       @media (max-width: 800px) {
-        background-color: #F1F1F1;
+        background-color: #F1F1F1;;
         box-shadow: 0px 4px 40px 0 rgba(0, 0, 0, 0.2);
       }
   
@@ -43,19 +45,23 @@
       &__img {
         margin: auto;
         display: block;
+        
   
         img {
           max-height: 266px;
           max-width: 266px;
           margin: 20px auto;
-          object-fit: contain;
-          border-radius: 20px;
-          object-fit: contain;
+          object-fit: cover;
+          border-radius: 500px;
+          margin-bottom: 100px;
         }
       }
   
       &__inner {
         align-self: flex-start;
+        padding-top: 40px;
+        padding-bottom: 10px;
+        height: 200px;
       }
   
       &__title {
@@ -71,12 +77,23 @@
       }
 
       &__description {
+        overflow: hidden;
         color: 828282;
         font-size: 14px;
         font-weight: 400;
         text-decoration: none;
-        margin-bottom: 20px;
-        color: #828282
+        margin-bottom: 10px;
+        color: #828282;
+
+        &__h {
+          overflow: hidden;
+          color: 828282;
+          font-size: 14px;
+          font-weight: 400;
+          text-decoration: none;
+          margin-bottom: 5px;
+          color: #828282
+          }
       }
 
       
@@ -94,33 +111,17 @@
         }
         
       }
-      
-      &:hover {
-        background-color: #05193B;
-        box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.20), 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
-        transition: background-color .2s ease-in-out, box-shadow .2s ease-in-out;
-      }
-      
-      &:hover &__charact {
-        opacity: 1;
-        visibility: visible;
-                
-      }
-  
-      &:hover &__inner {
-      
-        visibility: hidden;
-      }
-  
-      &:hover &__img img {
-        opacity: 0;
-        visibility:hidden;
-
-      }
-      
+     
       
     }
   
     
   }
   
+  
+
+  .crop {
+    width: 266px;
+    height: 266px;
+    overflow: hidden;
+}

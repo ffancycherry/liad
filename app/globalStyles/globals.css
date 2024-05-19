@@ -116,13 +116,38 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .projects-pagination-prev.disabled, .projects-pagination-next.disabled {
+  text-decoration: none;
   display: none;
 }
 
 .projects-pagination-item.selected {
+  text-decoration: none;
   background-color: #cfcece;
 }
 
 .projects-pagination-item:hover.selected a {
+  text-decoration: none;
   background-color: #cfcece;
+}
+.projects-pagination-prev, .projects-pagination-next {
+  list-style-type: none;
+}
+
+
+.devteam-pagination-prev.disabled, .devteam-pagination-next.disabled {
+  text-decoration: none;
+  display: none;
+}
+
+.devteam-pagination-item.selected {
+  text-decoration: none;
+  background-color: #cfcece;
+}
+
+.devteam-pagination-item:hover.selected a {
+  text-decoration: none;
+  background-color: #cfcece;
+}
+.devteam-pagination-prev, .devteam-pagination-next {
+  list-style-type: none;
 }

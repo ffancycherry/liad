@@ -119,16 +119,17 @@
     
       &__inner {
         position: relative;
+        z-index: 2;
         display: flex;
       }
     
       &__bg {
         position: absolute;
-        top: -95px;
+        //top: -95px;
         z-index: -1;
         left: 0;
-        color: #242C39;
-        font-size: 376px;
+        color: #05193b4f;
+        font-size: 300px;
         font-weight: 700;
     
         @media (max-width: 1520px) {
