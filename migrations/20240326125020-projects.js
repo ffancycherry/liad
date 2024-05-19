@@ -22,6 +22,7 @@ const images = [
 
 module.exports = {
   async up(db) {
+    db.createCollection('projects')
     return db.collection('projects').insertMany(
       [...Array(50)].map(() => ({
         name: 'Проект № ' + (Math.floor(Math.random() * (100 - 1)) + 1),

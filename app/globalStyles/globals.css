@@ -151,3 +151,22 @@ body::-webkit-scrollbar-thumb:hover {
 .devteam-pagination-prev, .devteam-pagination-next {
   list-style-type: none;
 }
+
+
+.events-pagination-prev.disabled, .events-pagination-next.disabled {
+  text-decoration: none;
+  display: none;
+}
+
+.events-pagination-item.selected {
+  text-decoration: none;
+  background-color: #cfcece;
+}
+
+.events-pagination-item:hover.selected a {
+  text-decoration: none;
+  background-color: #cfcece;
+}
+.events-pagination-prev, .events-pagination-next {
+  list-style-type: none;
+}
