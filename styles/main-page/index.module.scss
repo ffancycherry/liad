@@ -79,10 +79,14 @@
         }
 
     &__banner {
-      
+      border-radius: 25px;
+      padding-left: 35px;
+      padding-right: 35px;
       img {
         height: auto;
-        width: 1460px;
+        max-width: 1420px;
+        border-radius: 25px;
+        
       }
 
     }

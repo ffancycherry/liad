@@ -45,7 +45,7 @@ const Header = () => {
           </li>
           <li className='header__links__item'>
             <Link
-              href='/project-competition'
+              href='/project-competition/current'
               className='header__links__item__btn header__links__item__btn--project__competition'
             >
               КОНКУРС ПРОЕКТОВ

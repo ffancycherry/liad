@@ -170,3 +170,22 @@ body::-webkit-scrollbar-thumb:hover {
 .events-pagination-prev, .events-pagination-next {
   list-style-type: none;
 }
+
+
+.competitions-pagination-prev.disabled, .competitions-pagination-next.disabled {
+  text-decoration: none;
+  display: none;
+}
+
+.competitions-pagination-item.selected {
+  text-decoration: none;
+  background-color: #cfcece;
+}
+
+.competitions-pagination-item:hover.selected a {
+  text-decoration: none;
+  background-color: #cfcece;
+}
+.competitions-pagination-prev, .competitions-pagination-next {
+  list-style-type: none;
+}

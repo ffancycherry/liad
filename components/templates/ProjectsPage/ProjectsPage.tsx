@@ -17,7 +17,7 @@ const ProjectsPage = ({ searchParams }: IProjectsPage) => {
 
   return (
     <>
-      <h1 className=''>Проекты</h1>
+      <h1 className={styles.projects__title}>Проекты</h1>
       {projectSpinner && (
         <motion.ul
           {...basePropsForMotion}

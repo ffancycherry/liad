@@ -17,7 +17,7 @@ const DevteamPage = ({ searchParams }: IDevteamPage) => {
 
   return (
     <>
-      <h1 className=''>Команда разработчиков</h1>
+      <h1 className={styles.devteam__title}>Команда разработчиков</h1>
       {devteamSpinner && (
         <motion.ul
           {...basePropsForMotion}

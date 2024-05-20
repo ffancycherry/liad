@@ -1,6 +1,6 @@
 import { ICompetition } from './common'
 
-export interface ILoadAllCompetiotionsFx {
+export interface ILoadAllCompetitionsFx {
   limit: number
   offset: number
   additionalParam?: string

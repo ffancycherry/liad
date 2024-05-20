@@ -1,4 +1,4 @@
-.projects {
+.competitions {
     min-height: 555px;
     padding-bottom: 40px;
     padding-left: 34px;
@@ -462,15 +462,15 @@
     
     &__list {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr ;
       grid-gap: 32px;
       width: 100%;
       margin-bottom: 60px;
       padding: 0px;
   
       @media (max-width: 1150px) {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
       }
   
       @media (max-width: 800px) {
@@ -619,5 +619,30 @@
           }
         }
       }
+    }
+    &__link__current{
+      text-decoration: none;
+      color: #828282;
+      padding-right: 30px;
+    }
+    &__link__current:hover{
+      text-decoration: none;
+      color: #05193B;
+      padding-right: 30px;
+    }
+
+    &__link__completed{
+      text-decoration: none;
+      padding: 30px;
+      color: #828282;
+    }
+    &__link__completed:hover{
+      text-decoration: none;
+      padding: 30px;
+      color: #05193B;
+    }
+
+    &__title{
+      padding-bottom: 20px;
     }
 }

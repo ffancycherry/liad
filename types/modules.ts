@@ -21,7 +21,7 @@ export interface IEventsItemProps {
   title?: string
 }
 
-export interface ICompetionItemProps {
+export interface ICompetitionItemProps {
   item: ICompetition
   title?: string
 }

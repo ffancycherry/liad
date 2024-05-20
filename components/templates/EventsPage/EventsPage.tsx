@@ -17,7 +17,7 @@ const EventsPage = ({ searchParams }: IEventsPage) => {
 
   return (
     <>
-      <h1 className=''>Мероприятия</h1>
+      <h1 className={styles.events__title}>Мероприятия</h1>
       {eventsSpinner && (
         <motion.ul
           {...basePropsForMotion}
