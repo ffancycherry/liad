@@ -51,6 +51,7 @@
 
 .last-crumb {
   color: #05193B;
+  list-style-type: none;
 }
 
 .last-crumb:hover {
