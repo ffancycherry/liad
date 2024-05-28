@@ -6,12 +6,12 @@ import styles from '@/styles/projects-item/index.module.scss'
 const ProjectsItem = ({ item }: IProjectsItemProps) => (
   <>
     <li className={styles.list__item}>
-      <Link href={`/project/${item._id}`} className={styles.list__item__img}>
+      <Link href={`/projects/${item._id}`} className={styles.list__item__img}>
         <Image src={item.img.toString()} alt={item.name} fill />
       </Link>
       <div className={styles.list__item__inner}>
         <h6 className={styles.list__item__title}>
-          <Link href={`/project/${item._id}`}>{item.name}</Link>
+          <Link href={`/projects/${item._id}`}>{item.name}</Link>
         </h6>
         <span className={styles.list__item__description}>
           {item.description}

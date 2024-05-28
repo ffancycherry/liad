@@ -10,7 +10,7 @@ export default function Catalog({
   return (
     <ProjectCompetitionCompletedPage
       searchParams={searchParams || {}}
-      pageName='catalog'
+      pageName='completed-competition'
     />
   )
 }

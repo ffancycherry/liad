@@ -21,7 +21,7 @@ export interface IEvent {
   name: string
   description: string
   date: string
-  //status: string
+  status: string
   img: string[]
 }
 
@@ -33,6 +33,7 @@ export interface ICompetition {
   status: string
   files: string[]
   img: string[]
+  errorMessage?: string
 }
 
 export interface IScientificWorkTheme {

@@ -1,7 +1,7 @@
 import DevteamLayout from '@/components/layouts/DevteamLayout'
 
 export const metadata = {
-  title: 'ЛИАД | Команда разработчиков',
+  title: 'ЛИАД | Коллектив разработчиков',
 }
 
 export default function DevteamRootLayout({

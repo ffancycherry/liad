@@ -21,7 +21,16 @@ const CompetitionsItem = ({ item }: ICompetitionItemProps) => {
       <li className={styles.list__item}>
         <div className={styles.list__item__inner}>
           <h5 className={styles.list__item__title}>
-            <Link href={`/project-competition/${item._id}`}>{item.name}</Link>
+            {isCompleted && (
+              <Link href={`/project-competition/completed/${item._id}`}>
+                {item.name}
+              </Link>
+            )}
+            {!isCompleted && (
+              <Link href={`/project-competition/current/${item._id}`}>
+                {item.name}
+              </Link>
+            )}
           </h5>
           <div className={styles.list__item__desc}>
             <div className={styles.list__item__date}>
@@ -45,12 +54,22 @@ const CompetitionsItem = ({ item }: ICompetitionItemProps) => {
           </div>
           <div className={styles.competitions_inner__top}>
             <button className={styles.competitions_inner__btn}>
-              <Link
-                href={`/project-competition/${item._id}`}
-                className={styles.competitions_inner__btn__text}
-              >
-                Подробнее
-              </Link>
+              {isCompleted && (
+                <Link
+                  href={`/project-competition/completed/${item._id}`}
+                  className={styles.competitions_inner__btn__text}
+                >
+                  Подробнее
+                </Link>
+              )}
+              {!isCompleted && (
+                <Link
+                  href={`/project-competition/current/${item._id}`}
+                  className={styles.competitions_inner__btn__text}
+                >
+                  Подробнее
+                </Link>
+              )}
             </button>
           </div>
           {/*<div className={styles.list__item__charact}>

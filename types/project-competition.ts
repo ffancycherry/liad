@@ -10,3 +10,9 @@ export interface ICompetitions {
   count: number
   items: ICompetition[]
 }
+
+export interface ILoadOneCompetitionFx {
+  id: string
+  setSpinner?: (arg0: boolean) => void
+  withShowingSizeTable?: boolean
+}

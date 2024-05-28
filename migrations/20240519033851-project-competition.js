@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 /*const { faker } = require('@faker-js/faker')
 
@@ -29,7 +30,7 @@ const images = [
 module.exports = {
   async up(db) {
     db.createCollection('competition')
-    /* return db.collection('competition').insertMany(
+    /*return db.collection('competition').insertMany(
       [...Array(25)].map(() => ({
         name: getRandomArrayValue(nameCompleted),
         description: getRandomArrayValue(description),
@@ -40,7 +41,7 @@ module.exports = {
         }),
         status: 'completed',
         file: '/files/competition-1.docx',
-        img: [''],
+        img: images,
       })),
       [...Array(25)].map(() => ({
         name: getRandomArrayValue(nameCurrent),
@@ -52,7 +53,7 @@ module.exports = {
         }),
         status: 'current',
         file: '/files/competition-1.docx',
-        img: images,
+        img: [''],
       }))
     )*/
   },

@@ -64,7 +64,7 @@ const Header = () => {
               href='/dev-team'
               className='header__links__item__btn header__links__item__btn--dev__team'
             >
-              КОМАНДА РАЗРАБОТЧИКОВ
+              КОЛЛЕКТИВ РАЗРАБОТЧИКОВ
             </Link>
           </li>
           <li className='header__links__item'>
