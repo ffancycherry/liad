@@ -40,6 +40,7 @@ export interface IScientificWorkTheme {
   _id: string
   name: string
   description: string
+  status: string
 }
 
 export interface IScientificWork {

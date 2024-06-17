@@ -4,6 +4,7 @@ import {
   IEvent,
   IProject,
   IScientificWork,
+  IScientificWorkTheme,
 } from './common'
 
 export interface IProjectsItemProps {
@@ -28,6 +29,11 @@ export interface ICompetitionItemProps {
 
 export interface IScientificWorkItemProps {
   item: IScientificWork
+  title?: string
+}
+
+export interface IScientificWorkThemeItemProps {
+  item: IScientificWorkTheme
   title?: string
 }
 

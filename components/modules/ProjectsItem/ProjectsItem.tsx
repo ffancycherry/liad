@@ -1,17 +1,16 @@
 import { IProjectsItemProps } from '@/types/modules'
-import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/projects-item/index.module.scss'
 
 const ProjectsItem = ({ item }: IProjectsItemProps) => (
   <>
     <li className={styles.list__item}>
-      <Link href={`/projects/${item._id}`} className={styles.list__item__img}>
+      <div className={styles.list__item__img}>
         <Image src={item.img.toString()} alt={item.name} fill />
-      </Link>
+      </div>
       <div className={styles.list__item__inner}>
         <h6 className={styles.list__item__title}>
-          <Link href={`/projects/${item._id}`}>{item.name}</Link>
+          <a>{item.name}</a>
         </h6>
         <span className={styles.list__item__description}>
           {item.description}

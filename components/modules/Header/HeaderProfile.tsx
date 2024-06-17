@@ -34,11 +34,11 @@ const HeaderProfile = forwardRef<HTMLDivElement, IWrappedComponentProps>(
               className='list-reset header-profile__inner'
             >
               <li className='header-profile__arrow' />
-              <li className='header-profile__item'>
+              {/*<li className='header-profile__item'>
                 <button className='btn-reset header-profile__item__btn'>
                   Профиль
                 </button>
-              </li>
+              </li>*/}
               <li className='header-profile__item'>
                 <button
                   className='btn-reset header-profile__item__btn'

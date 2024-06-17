@@ -37,7 +37,7 @@ const Header = () => {
           </li>
           <li className='header__links__item'>
             <Link
-              href='/scientific-work'
+              href='/scientific-work/examples'
               className='header__links__item__btn header__links__item__btn--scientific__work'
             >
               НАУЧНАЯ РАБОТА
@@ -45,7 +45,7 @@ const Header = () => {
           </li>
           <li className='header__links__item'>
             <Link
-              href='/project-competition/current'
+              href='/project-competition/competition-current'
               className='header__links__item__btn header__links__item__btn--project__competition'
             >
               КОНКУРС ПРОЕКТОВ
@@ -53,7 +53,7 @@ const Header = () => {
           </li>
           <li className='header__links__item'>
             <Link
-              href='/events'
+              href='/events/events-current'
               className='header__links__item__btn header__links__item__btn--events'
             >
               МЕРОПРИЯТИЯ

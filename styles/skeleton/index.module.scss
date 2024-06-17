@@ -166,3 +166,111 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
+
+  .skeleton_themes {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+  
+    @media (max-width: 1150px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  
+    @media (max-width: 800px) {
+      grid-gap: 24px;
+    }
+  
+    @media (max-width: 620px) {
+      grid-gap: 18px;
+    }
+  
+    @media (max-width: 460px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .skeleton_themes__item {
+    background-color: #828282;
+    overflow: hidden !important;
+    padding: 0;
+    height: 220px;
+    width: 670px;
+    border-radius: 25px;
+  
+    @media (max-width: 800px) {
+      height: 350px;
+    }
+  
+    @media (max-width: 460px) {
+      height: 412px;
+    }
+  }
+  
+  .skeleton_themes__item__light {
+    height: 100%;
+    animation-duration: 1.6s;
+    background: linear-gradient(270deg, #fffffc0d 34.78%, rgba(255, 255, 255, 0.17) 60.33%, #fffffc0d 84.84%);
+    /*background: linear-gradient(270deg, #828282 34.78%, rgba(131, 131, 131, 0.06) 60.33%, #828282 84.84%);*/
+    animation-name: skeleton;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .skeleton_examples {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+  
+    @media (max-width: 1150px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  
+    @media (max-width: 800px) {
+      grid-gap: 24px;
+    }
+  
+    @media (max-width: 620px) {
+      grid-gap: 18px;
+    }
+  
+    @media (max-width: 460px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .skeleton_examples__item {
+    background-color: #828282;
+    overflow: hidden !important;
+    padding: 0;
+    height: 220px;
+    width: 670px;
+    border-radius: 25px;
+  
+    @media (max-width: 800px) {
+      height: 350px;
+    }
+  
+    @media (max-width: 460px) {
+      height: 412px;
+    }
+  }
+  
+  .skeleton_examples__item__light {
+    height: 100%;
+    animation-duration: 1.6s;
+    background: linear-gradient(270deg, #fffffc0d 34.78%, rgba(255, 255, 255, 0.17) 60.33%, #fffffc0d 84.84%);
+    /*background: linear-gradient(270deg, #828282 34.78%, rgba(131, 131, 131, 0.06) 60.33%, #828282 84.84%);*/
+    animation-name: skeleton;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }

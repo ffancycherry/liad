@@ -9,11 +9,14 @@ import ProjectsItem from '@/components/modules/ProjectsItem/ProjectsItem'
 import styles from '@/styles/projects-page/index.module.scss'
 import { useUnit } from 'effector-react'
 import { $projects } from '@/context/projects'
+import { $isAuth } from '@/context/auth'
+import Link from 'next/link'
 
 const ProjectsPage = ({ searchParams }: IProjectsPage) => {
   const { projectSpinner, paginationProps, handlePageChange } =
     useProjectFilters(searchParams)
   const projects = useUnit($projects)
+  const isAuth = useUnit($isAuth)
 
   return (
     <>
@@ -39,7 +42,18 @@ const ProjectsPage = ({ searchParams }: IProjectsPage) => {
           exit={{ opacity: 0 }}
         >
           {(projects.items || []).map((item) => (
-            <ProjectsItem key={item._id} item={item} />
+            <div key={item._id}>
+              {isAuth ? (
+                <Link
+                  href={`/projects/${item._id}`}
+                  className={styles.project__list__item__inner}
+                >
+                  <ProjectsItem item={item} />
+                </Link>
+              ) : (
+                <ProjectsItem item={item} />
+              )}
+            </div>
           ))}
         </motion.ul>
       )}

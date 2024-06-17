@@ -21,7 +21,7 @@ const ProjectCompetitionCurrentPage = ({ searchParams }: ICompetitionPage) => {
       <h1 className={styles.competitions__title}>
         Актуальные конкурсы{' '}
         <Link
-          href='/project-competition/completed'
+          href='/project-competition/competition-completed'
           className={styles.competitions__link__completed}
         >
           Итоги конкурсов

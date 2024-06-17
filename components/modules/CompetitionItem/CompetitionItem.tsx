@@ -22,12 +22,16 @@ const CompetitionsItem = ({ item }: ICompetitionItemProps) => {
         <div className={styles.list__item__inner}>
           <h5 className={styles.list__item__title}>
             {isCompleted && (
-              <Link href={`/project-competition/completed/${item._id}`}>
+              <Link
+                href={`/project-competition/competition-completed/${item._id}`}
+              >
                 {item.name}
               </Link>
             )}
             {!isCompleted && (
-              <Link href={`/project-competition/current/${item._id}`}>
+              <Link
+                href={`/project-competition/competition-current/${item._id}`}
+              >
                 {item.name}
               </Link>
             )}

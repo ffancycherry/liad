@@ -623,4 +623,25 @@
     &__title{
       padding-bottom: 20px;
     }
+    &__link__current{
+      text-decoration: none;
+      color: #828282;
+      padding-right: 30px;
+    }
+    &__link__current:hover{
+      text-decoration: none;
+      color: #05193B;
+      padding-right: 30px;
+    }
+
+    &__link__completed{
+      text-decoration: none;
+      padding: 30px;
+      color: #828282;
+    }
+    &__link__completed:hover{
+      text-decoration: none;
+      padding: 30px;
+      color: #05193B;
+    }
 }

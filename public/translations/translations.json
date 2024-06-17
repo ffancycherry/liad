@@ -11,10 +11,14 @@
       "main": "Main",
       "projects": "Projects",
       "scientific-work": "Scientific work",
+      "themes": "Themes",
+      "examples": "Examples",
       "project-competition": "Project Competition",
-      "current": "Current competition",
-      "completed": "Completed competition",
+      "competition-current": "Current competition",
+      "competition-completed": "Completed competition",
       "events": "Events",
+      "events-current": "Current events",
+      "events-completed": "Completed events",
       "dev-team": "Dev team"
     },
     "common": {
@@ -33,10 +37,14 @@
       "main": "Главная",
       "projects": "Проекты",
       "scientific-work": "Научная работа",
+      "themes": "Свободные темы",
+      "examples": "Примеры статей",
       "project-competition": "Конкурс проектов",
-      "current": "Актуальные конкурсы",
-      "completed": "Итоги конкурсов",
+      "competition-current": "Актуальные конкурсы",
+      "competition-completed": "Итоги конкурсов",
       "events": "Мероприятия",
+      "events-current": "Актуальные мероприятия",
+      "events-completed": "Итоги мероприятий",
       "dev-team": "Коллектив разработчиков"
     },
     "common": {

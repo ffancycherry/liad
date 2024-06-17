@@ -38,7 +38,7 @@ const CompetitionPage = ({ id }: ICompetitionPageProps) => {
         translations['ru'].breadcrumbs as {
           [index: string]: string
         }
-      )[competition.status]
+      )['competition-' + competition.status]
 
       lastCrumb.textContent = competitionSpinner
         ? translations['ru'].common.loading

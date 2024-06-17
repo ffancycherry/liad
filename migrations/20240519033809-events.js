@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-{
-  /*const { faker } = require('@faker-js/faker')
+/*const { faker } = require('@faker-js/faker')
 
 const getRandomArrayValue = (arr) => arr[Math.floor(Math.random() * arr.length)]
 
@@ -25,34 +24,44 @@ const description = [
   'На этом семинаре мы рассмотрим основы проектирования и внедрения биг-дата архитектур для обработки и анализа больших объемов данных. Участники узнают о лучших практиках, архитектурных решениях и инструментах для работы с данными на больших масштабах.',
   'Присоединяйтесь к нашему вебинару, где мы обсудим последние тенденции и инновации в области машинного обучения и искусственного интеллекта. Участники получат представление о направлениях развития и потенциальных приложениях этих технологий.',
   'На этом воркшопе мы рассмотрим применение технологий машинного обучения для автоматизации бизнес-процессов. Участники узнают о возможностях автоматизации рутинных задач, оптимизации бизнес-процессов и повышении эффективности предприятий с помощью алгоритмов машинного обучения.',
-]
-const images = [
+]*/
+/*const images = [
   '/img/projects/proj-1.png',
   '/img/projects/proj-2.png',
   '/img/projects/proj-3.png',
   '/img/projects/proj-4.png',
   '/img/projects/proj-5.png',
 ]*/
-}
 
 module.exports = {
   async up(db) {
-    {
-      /*db.createCollection('events')
-    return db.collection('events').insertMany(
-      [...Array(50)].map(() => ({
-        name: getRandomArrayValue(name),
-        description: getRandomArrayValue(description),
-        date: faker.date.betweens({
-          from: '2024-01-01',
-          to: '2025-03-28',
-          count: 1,
-        }),
-        img: images,
-      }))
-    )*/
-    }
     db.createCollection('events')
+    /*return db.collection('events').insertMany(
+        /*[...Array(25)].map(() => ({
+          name: getRandomArrayValue(name),
+          description: getRandomArrayValue(description),
+          date: faker.date.betweens({
+            from: '2023-03-28',
+            to: '2024-05-28',
+            count: 1,
+          }),
+          status: 'completed',
+          img: images,
+        }))
+      )
+        [...Array(25)].map(() => ({
+          name: getRandomArrayValue(name),
+          description: getRandomArrayValue(description),
+          date: faker.date.betweens({
+            from: '2024-05-28',
+            to: '2025-01-28',
+            count: 1,
+          }),
+          status: 'current',
+          img: [''],
+        }))
+      )
+    }*/
   },
 
   async down(db) {

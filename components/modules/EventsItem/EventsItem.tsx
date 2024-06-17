@@ -12,20 +12,64 @@ function convertDate(date: Date): string {
   return dayString + '.' + monthString + '.' + year
 }
 
-const EventsItem = ({ item }: IEventsItemProps) => (
-  <>
-    <li className={styles.list__item}>
-      <div className={styles.list__item__inner}>
-        <h5 className={styles.list__item__title}>
-          <Link href={`/events/${item._id}`}>{item.name}</Link>
-        </h5>
-        <div className={styles.list__item__date}>
-          {/*{item.date[0].slice(0, 10)}*/}
-          {convertDate(new Date(item.date[0]))}
-        </div>
-        <div className={styles.list__item__description}>{item.description}</div>
+const EventsItem = ({ item }: IEventsItemProps) => {
+  const isCompleted = item.status === 'completed'
 
-        {/*<div className={styles.list__item__charact}>
+  return (
+    <>
+      <li className={styles.list__item}>
+        <div className={styles.list__item__inner}>
+          <h5 className={styles.list__item__title}>
+            {isCompleted && (
+              <Link href={`/events/events-completed/${item._id}`}>
+                {item.name}
+              </Link>
+            )}
+            {!isCompleted && (
+              <Link href={`/events/events-current/${item._id}`}>
+                {item.name}
+              </Link>
+            )}
+          </h5>
+          <div className={styles.list__item__desc}>
+            <div className={styles.list__item__date}>
+              {/*{item.date[0].slice(0, 10)}*/}
+              {convertDate(new Date(item.date[0]))}
+            </div>
+
+            {/* Отображаем лейбл "Завершен", если конкурс завершен */}
+            {isCompleted && (
+              <div className={styles.list__item__label}>
+                <ul>
+                  <li>Заверешен</li>
+                </ul>
+              </div>
+            )}
+          </div>
+          <div className={styles.list__item__description}>
+            {item.description}
+          </div>
+          <div className={styles.events_inner__top}>
+            <button className={styles.events_inner__btn}>
+              {isCompleted && (
+                <Link
+                  href={`/events/events-completed/${item._id}`}
+                  className={styles.events_inner__btn__text}
+                >
+                  Подробнее
+                </Link>
+              )}
+              {!isCompleted && (
+                <Link
+                  href={`/events/events-current/${item._id}`}
+                  className={styles.events_inner__btn__text}
+                >
+                  Подробнее
+                </Link>
+              )}
+            </button>
+          </div>
+          {/*<div className={styles.list__item__charact}>
           <span className={styles.list__item__charact__item}>
             Стек технологий:
             <br />
@@ -42,9 +86,10 @@ const EventsItem = ({ item }: IEventsItemProps) => (
             {item.team}
           </span>
 </div>*/}
-      </div>
-    </li>
-  </>
-)
+        </div>
+      </li>
+    </>
+  )
+}
 
 export default EventsItem

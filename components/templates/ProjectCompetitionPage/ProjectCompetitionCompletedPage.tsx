@@ -22,7 +22,7 @@ const ProjectCompetitionCompletedPage = ({
     <>
       <h1 className={styles.competitions__title}>
         <Link
-          href='/project-competition/current'
+          href='/project-competition/competition-current'
           className={styles.competitions__link__current}
         >
           Актуальные конкурсы{' '}
