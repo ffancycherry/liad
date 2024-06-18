@@ -60,7 +60,7 @@ const CompetitionsItem = ({ item }: ICompetitionItemProps) => {
             <button className={styles.competitions_inner__btn}>
               {isCompleted && (
                 <Link
-                  href={`/project-competition/completed/${item._id}`}
+                  href={`/project-competition/competition-completed/${item._id}`}
                   className={styles.competitions_inner__btn__text}
                 >
                   Подробнее
@@ -68,7 +68,7 @@ const CompetitionsItem = ({ item }: ICompetitionItemProps) => {
               )}
               {!isCompleted && (
                 <Link
-                  href={`/project-competition/current/${item._id}`}
+                  href={`/project-competition/competition-current/${item._id}`}
                   className={styles.competitions_inner__btn__text}
                 >
                   Подробнее
