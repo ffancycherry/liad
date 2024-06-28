@@ -7,6 +7,8 @@ First, run the development server:
 cd liad
 
 ```bash
+cd liad
+
 yarn dev
 
 ```
